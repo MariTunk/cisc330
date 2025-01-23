@@ -1,0 +1,35 @@
+﻿CISC 3300 F24 
+In class assignment 3 
+1. Elements with _semantic__ meaning are intended to convey meaning by their element type, even if the element is indistinguishable from other elements visually. 
+2. ____lock__ level elements always starts on a new line 
+3. _The anchor element _ defines a hyperlink, which is used to link from one page to another. 4. Image files can be accessed _relative_ to the HTML file. 
+5. The _compression_ algorithm for a PNG file is lossless. 
+6. The _form_ element gives you a set of input elements to collect data from your users. 
+7. Create an HTML page that has a table. It should have at least 3 rows and 3 columns with some kind of data. The first row should have table headers. 
+Please create a directory called in-class-3 in your local repository, include a .txt file with the answers for questions 1-6 and an .html file for question 7 on submission.
+
+
+
+
+
+
+* Use relative file paths because absolute is too deep, and everyone doesn't have the same file structure
+* Referencing a phone <a href tel: the number
+* With an image, attributes :src(source),alt(th etext descriptio)
+* bitmap = pixels assigned to numbers to create an image 
+Jpg - joint photographic experts group 
+* Worse for visibility 
+* Loads faster 
+Png- portable network graphics 
+* High fidelity 
+* Retains all the data contained in file 
+* Can be transparent 
+* Best fo when the loadtime is not an issue 
+
+
+Gif 
+* Lossless 
+* Like png 
+Vector images- use shapes and graphs to draw things 
+Svgs store images as vectors 
+* Best for logos and icons, gives drawing instructions
