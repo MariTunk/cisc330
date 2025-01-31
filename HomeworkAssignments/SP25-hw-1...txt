@@ -1,0 +1,23 @@
+﻿CISC 3300 SP24 
+Homework 1 
+1. What is HTML? What does it do? 
+HTML is a standard language used to create structured web pages. It defines webpage content using headings, paragraphs, links, images, lists, tables, etc.
+2. Access https://www.fordham.edu/. In your own words, describe how this webpage uses structure to convey meaning and navigation options to the user. 
+Fordham University's website has a well-organized structure to convey information and facilitate user navigation effectively. The main navigation menu is displayed at the top of the homepage, with headings: About, Mission, Academics, Admissions and Aid, Research, and Student Life. Each section has a submenu that guides users to more specific information, making it easy to follow and find what you are looking for. 
+3. What is an HTML element? Tag? Attribute? 
+HTML elements define the structure and content of a webpage. They consist of an opening and closing tag. 
+HTML tags are the part of an element that defines its purpose. Tags are enclosed in angle brackets (<>) and come in pairs 
+HTML attributes provide information about an element. They are in the opening tag and follow a name="value" format.
+4. What does it mean when an element has semantic meaning? And structural meaning? 
+Semantic elements affect both meaning( definition of the element) and structure. Structural elements shape the visual elements such as the layout and grouping 
+5. What is the default behavior when submitting a HTML form? 
+The form input value sends data to the server. The page is then refreshed or redirected to the Page. The browser navigates to the response page if the form submission is successful If no action is set the form submits to the same page, causing the page to reload.
+6. Create a webpage for a fake business of your choosing. It should have:     a. an h1 element with the title of the business 
+b. a p element with a description of the business 
+c. a subsection with a sub heading and p element describing that section d. create an images directory and put a relevant image in the directory, include that image on the webpage via a src attribute with a relative path. 
+e. a contact form which should have: 
+i. a text input element for first name with a label 
+ii. a text input element for last name with a label 
+iii. an email element with a label 
+iv. a submit element with a value of “Submit” 
+Please create a directory called homework-1 in your local repository, include a .txt file with the answers for questions 1-5 and an .html file for question 6 on submission.
