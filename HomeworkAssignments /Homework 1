@@ -1,1 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sunny Creations</title>
+</head>
+<body>
+    <h1>Mariyam's Creations</h1>
 
+    <p>Welcome to Mariyam's Creations, your go-to studio for custom henna designs and hand-painted gifts that are as unique as you are! We specialize in creating one-of-a-kind designs for all occasions, from birthdays to holidays, weddings, henna parties, and everything in between.</p>
+
+    <section>
+        <h2>Our Services</h2>
+        <p>Mariyam's Creations, offers personalized henna designs that are perfect for each customer. Whether you need custom henna, portraits, or decorative items, we've got you covered. Let us bring your ideas to life with our expert craftsmanship!</p>
+    </section>
+
+    <img src="Copy of mariyams.jpg" alt=" Marriyams Creations Logo" width="300">
+
+    <!-- Contact Form -->
+    <section>
+        <h2>Contact Us</h2>
+        <form action="#" method="post">
+            <label for="first-name">First Name:</label>
+            <input type="text" id="first-name" name="Mariyam" required><br><be>
+
+            <label for="last-name">Last Name:</label>
+            <input type="text" id="last-name" name="Tunkara" required><br><br>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name=" mtunkara4@fordham.edu " required><br><br>
+
+            <!-- Submit Button -->
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+</body>
+</html> 
