@@ -18,16 +18,12 @@
 
 
             .grid-container {
-                /* we define a grid container */
                 display: grid;
 
-                /*we define rows and columns, they define a track based on the number of values given and the value of those values */
-                /* here we define 6 horizontal rows 100px in length*/
-                /*grid-template-rows: 100px 100px 100px 100px 100px;*/
                 grid-template-rows: repeat(5, 100px);
-                /* here we define 6 vertical columns 100px in length*/
+        
                 grid-template-columns: 100px 100px 100px 100px 100px;
-                /*grid-template-columns: repeat(5, 100px);*/
+               
             }
 
             .grid-item-1 {
@@ -35,13 +31,13 @@
                 grid-row-start: 1;
                 grid-row-end: 2;
                 grid-column-start: 1;
-                grid-column-end: 2;
+                grid-column-end: 5;
                 background-color: blue;
             }
 
             .grid-item-2 {
-                grid-row-start: 3;
-                grid-row-end: 6;
+                grid-row-start: 1;
+                grid-row-end: 5;
                 grid-column-start: 3;
                 grid-column-end: 5;
                 background-color: green;
