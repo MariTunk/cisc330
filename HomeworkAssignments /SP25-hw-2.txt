@@ -1,1 +1,26 @@
+1. What do the id and class attributes do? How are they alike and different? 
+The id attribute identifies a single element on a page, The class attribute can be applied to multiple elements to group them, and both are CSS elements
+
+2. What are the parts of a CSS rule? 
+Selectors, which target the HTML elements, the declaration block contains style rules in { }, CSS properties define the style aspect, and CSS values specify the styling 
+
+3. Explain how CSS rules cascade. 
+More specific selectors override general ones, such as the id > class > element. The source order states that later rules override earlier rules if they have the same specificity. “!important” overrides all normal rules. Some properties are inherited from parent elements, but others are not.
+
+4. Contrast display: block, inline, inline-block. 
+Block’s take up the full width and start on a new line
+Inline stays within the line and is only as wide as its content 
+inline-block are like inline but allow you to set the width and height
+
+5. What are border, padding, and margin? 
+The Border is a visible boundary around an element 
+Padding is the pace between content and the border
+Margins are the space outside the border, separating elements
+These define how elements are spaced and sized
+
+6. Let’s improve our fake business webpage from the first homework: 
+  a. Make a full-width header div with a centered row of links and a border. The links can route to ‘#.’ Give the header a background color    and the links a foreground color. 
+  b. Create a logo with a fancy font from google fonts and some color. And set a google font for the text of the rest of your webpage. 
+  c. Every item on the page should have adequate margin/padding. 
+  d. Try to think about the usability principles we have discussed in class; try to make the design choices increase the usability of the page.
 
