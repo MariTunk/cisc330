@@ -1,7 +1,7 @@
 CISC 3300 S25 
 Homework 3 
 1. Compare and contrast Flexbox and CSS grid, how are they alike and how are they different? 
-CSS Grid is Two dimensional best for complex layouts. Flexbox is good for One one-dimensional and great for arranging things dynamically. Both are CSS layouts 
+CSS Grid is two dimensional and best for complex layouts. Flexbox is good for one dimensional and great for arranging things dynamically. Both are CSS layouts 
 2. What’s responsive design in web development and how do we implement it? 
 Responsive designs ensure that the website can work on different devices, allows you to move from mobile to laptop, and it maintains its style and format,CSS uses media queries, flexible grids, and relative units to get responsiveness  
 
