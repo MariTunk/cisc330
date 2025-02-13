@@ -1,21 +1,26 @@
-
 <!DOCTYPE html>
 <html lang="en">
-  <script>
-     
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Run JavaScript</title>
+</head>
+<body>
+    <script>
+        const myArray = [
+            "I have a cat.",
+            "There goes a cat in a tree.",
+            "The professor cat's name is pinecone.",
+            "Walking through the woods."
+        ];
 
-    const myArray = [
-      "I have a cat."
-      "There goes a cat in a tree."
-      "The professor cat's name is pinecone."
-      "Walking through the woods."
-    ]
-  
-   function wordCheck(str){
-     return str.includes("pinecone");
-   }
-    //filter - creates a new array filled with elements that pass a test provided by a function
-    const filter = myArray.filter("wordCheck");
-    
+        function wordCheck(str){
+            return str.includes("pinecone");
+        }
+        
+        //filter - creates a new array filled with elements that pass a test provided by a function
+        const filter = myArray.filter(wordCheck);
+        console.log(filter);
     </script>
+</body>
 </html>
