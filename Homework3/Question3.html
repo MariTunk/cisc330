@@ -1,1 +1,72 @@
+<!DOCTYPE html>
+ <html lang="en">
+   <head>
+       
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+        <title>flexbox</title>
+
+        <style>
+
+
+            .flex-container {
+                display: flex;
+                flex-direction: row;
+
+                flex-wrap: wrap;
+                
+                justify-content: center;
+                
+                align-items: center;
+                
+                align-content: flex-end;
+
+            }
+
+             @media (max-width: 499px)
+             {
+               .flex-container
+               {
+                flex-direction: column; /* Stack items vertically */
+               }
+             }
+ 
+           @media (min-width: 500px)
+           {
+
+              .flex-container
+              {
+                flex-direction: row; /* Align items horizontally */
+              }
+           }
+
+
+
+            .flex-item {
+                width: 100px;
+                height: 100px;
+                background-color:pink;
+                color: grey;
+                margin: 20px;
+
+            }
+              #first-flex-item {
+                order: 3;
+            }
+
+          </style>
+
+    </head>
+
+    <body>
+
+        <div class="flex-container">
+            <div id="first-flex-item" class="flex-item">div1</div>
+            <div class="flex-item">div2</div>
+            <div class="flex-item">div3</div>
+        </div>
+
+    </body>
+
+</html>
