@@ -2,13 +2,13 @@ CISC 3300 F24
 In class assignment 11
 
 1. _JQuery_ is a lightweight, "write less, do more", JavaScript library
-2. __ makes our lives easier when doing common HTML/CSS/JS tasks.
+2. _JQuery_ makes our lives easier when doing common HTML/CSS/JS tasks.
 3. _AJAX_ allows web pages to be updated asynchronously by exchanging data with a web
 server behind the scenes.
 4. _HTTP_ how the internet handles communication between clients and servers, is done by
 requests and responses.
 5. _JSON_ is a text-based data format following JavaScript object syntax.
-6. __ is a way for two or more computer programs or components to communicate with
+6. _API_ is a way for two or more computer programs or components to communicate with
 each other.
 
 7. Create a webpage that (using jQuery) when a button is clicked, an HTTP GET request is sent
