@@ -72,12 +72,46 @@ console.log( avalibleCats)
 const unavailibleCats = cats.filter(cat => cat.adoptionStatus === 'not-available');
 console.log(unavailibleCats);
 
-//const cat = {name:"Pinecone", age:13, type:'Munchkin', cuteness: 9001};
 
+//question 7
+const randomValue = Math.random() * 10;
+
+const ternaryValue = randomValue > 5 ? 'greater than five!' : 'less than five!';
+console.log(ternaryValue)
+console.log(ternaryValue)
+
+
+//question 8
+Object.entries(cats).forEach(([key, value]) => {
+    console.log(key);
+    console.log(value);
+});
+
+//const catObject = {name:"Pinecone", age:13, type:'Munchkin', cuteness: 9001};
           
+//question 9
+          
+
+//loose equality          
+  if ('1' == 1) {
+    console.log('true');
+} else {
+    console.log('false');
+}
+
+//strict  equality 
+ if ('1' === 1) {
+    console.log('true');
+} else {
+    console.log('false');
+}         
+         
+//question 10 
+const catsArray = cats.map(cat => cat.name + 'is cute')
+console.log(catsArray)
+
+
+
         </script>
-        <script src="./js-1.js"></script>
     </head>
-    <body>
-    </body>
-</html>
+ </html>
