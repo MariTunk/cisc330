@@ -2,34 +2,39 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <title>jQuery</title>
-
+        <title>in class 9</title>
         <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     </head>
     <body>
 
-        <form id="form-id">
-            <input type="text" name="text">
-            <input type="submit" value="submit">
-        </form>
+        <button id="Button-get">
+            Button
+        </button>
+
+        <div id="cats-container"></div>
 
         <script>
-    
-            //form
-            const newForm = $('#form-id')
-            newForm.on('submit', function (e) {
-                e.preventDefault();
-                var newText = $('input:text').val();
-                console.log(newText)
-            });
+            $('#Button-get').on('click', function () {
+                $.ajax({
+                    url: 'http://localhost:8888/cats',
+                    type: "GET",
+                    dataType: "json",
+                    success: function (data) {
+                      
+                           // the $. ajax() method will automatically parse the JSON and turn it into a JavaScript object for you.
+                        console.log(data);
+                        $.each(data, function (index, value) {
+                          console.log(index)
+                          console.log(value)
+                            $('#cats-container').append(`
+                              <div>${value['name']}</div>
+                            `)
+                        })
+                    }
+                });
+            })
 
         </script>
-
-        <style>
-            .set-class{
-                color: red;
-            }
-        </style>
-
     </body>
 </html>
+~                 
