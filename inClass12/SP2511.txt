@@ -1,11 +1,11 @@
 CISC 3300 F24
 In class assignment 12
-1. Code that is being run within a function is known as an __ .
+1. Code that is being run within a function is known as an _execution context _ .
 2. In JavaScript, variables and functions within each execution context are created before
-they are executed, this is called __
+they are executed, this is called _hoisting _
 3. In each JavaScript execution context, the scope is the current execution context's
 variables object, plus the variables object for each parent execution context, this is called
-_Hoisting_
+_closure_
 4. _Encapsulation _ in object-oriented programming (OOP) is the practice of bundling data and
 methods into a single unit, or class. It also involves restricting direct access to some of
 the data
