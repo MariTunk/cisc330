@@ -1,0 +1,59 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Events</title>
+    <style>
+        .container {
+            display: flex;
+            flex-direction: column;
+            width: 200px;
+            margin: 20px;
+        }
+        .item {
+            padding: 10px;
+            margin: 5px;
+            border: 1px solid ;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div id="item1" class="item" onclick="initialReact('item1')">Item 1</div>
+        <div id="item2" class="item" onclick="initialReact('item2')">Item 2</div>
+        <div id="item3" class="item" onclick="initialReact('item3')">Item 3</div>
+        <div id="item4" class="item" onclick="initialReact('item4')">Item 4</div>
+        <div id="item5" class="item" onclick="initialReact('item5')">Item 5</div>
+    </div>
+
+    <script>
+        function initialReact(itemId) {
+            let div = document.getElementById(itemId);
+            div.innerText = 'added text!'; // Change the text
+
+            switch (itemId) {
+                case 'item1':
+                    div.style.backgroundColor = 'red';
+                    break;
+                case 'item2':
+                    div.style.backgroundColor = 'blue';
+                    break;
+                case 'item3':
+                    div.style.backgroundColor = 'green';
+                    break;
+                case 'item4':
+                    div.style.backgroundColor = 'orange';
+                    break;
+                case 'item5':
+                    div.style.backgroundColor = 'purple';
+                    break;
+                default:
+                    div.style.backgroundColor = 'yellow'; // Fallback color
+            }
+        }
+    </script>
+</body>
+</html>
+
