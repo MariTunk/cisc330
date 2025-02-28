@@ -32,7 +32,8 @@
                         $.each(data, function (key, value) {
                             console.log(value)
                             $('#cars-container').append(`
-                              <div class="user">${value['name']}</div>
+                              <div class="user">${value['itemName']}</div>
+                              <div class="user">${value['price']}</div>
                             `)
                         })
                     }
