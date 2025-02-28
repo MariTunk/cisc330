@@ -1,7 +1,11 @@
+<?php
+
+
+echo '
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
+ <head>
+    <meta charset="UTF-8">
         <title>Events</title>
     </head>
     <body>
@@ -19,6 +23,8 @@
         }
 
         </script>
-
     </body>
-</html>
+   </html>
+ 
+'
+?>
