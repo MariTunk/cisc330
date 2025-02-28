@@ -1,28 +1,43 @@
- <?php
-echo '
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
- <head>
-    <meta charset="UTF-8">
-        <title>Events</title>
+    <head>
+        <title>In Class Assignment 11</title>
+        <meta charset="UTF-8" />
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+        <style>
+            .clicker {
+                width: 200px;
+                height: 70px;
+                background-color: goldenrod;
+                color: black;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                cursor: pointer;
+                font-size: 20px;
+            }
+        </style>
     </head>
     <body>
-      
-        <div id="initial-text" onclick="initialReact()">
-            initial text
-        </div>
-
+        <button id="ajax-get" class="clicker">Click This!</button>
+        <div id="cars-container"></div>
         <script>
-
-        function initialReact() {
-            let div = document.getElementById('initial-text');
-            div.innerText = 'added text!';
-            div.style.backgroundColor = 'yellow';
-        }
-
+            $('#ajax-get').on('click', function () {
+                $.ajax({
+                    url: 'http://localhost:8888/cats',
+                    type: "GET",
+                    dataType: "json",
+                    success: function (data) {
+                        console.log(data);
+                        $.each(data, function (key, value) {
+                            console.log(value)
+                            $('#cars-container').append(`
+                              <div class="user">${value['name']}</div>
+                            `)
+                        })
+                    }
+                });
+            })
         </script>
     </body>
-   </html>
- 
-'
-?>
+</html>
