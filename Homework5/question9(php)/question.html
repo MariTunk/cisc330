@@ -1,14 +1,14 @@
  <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>In Class Assignment 11</title>
+        <title>Homework 5</title>
         <meta charset="UTF-8" />
         <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
         <style>
             .clicker {
                 width: 200px;
                 height: 70px;
-                background-color: goldenrod;
+                background-color: pink;
                 color: black;
                 display: flex;
                 justify-content: center;
@@ -19,12 +19,12 @@
         </style>
     </head>
     <body>
-        <button id="ajax-get" class="clicker">Click This!</button>
+        <button id="ajax-get" class="clicker">HTTP GET!</button>
         <div id="cars-container"></div>
         <script>
             $('#ajax-get').on('click', function () {
                 $.ajax({
-                    url: 'http://localhost:8888/cats',
+                    url: 'http://localhost:8888/Mariyam',
                     type: "GET",
                     dataType: "json",
                     success: function (data) {
