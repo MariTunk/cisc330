@@ -2,7 +2,7 @@
 //we need this to accept requests from any domain
 header("Access-Control-Allow-Origin: *");
 
-$uri = strtok($_SERVER["REQUEST_Henna"], '?');
+$henna = strtok($_SERVER["REQUEST_Henna"], '?');
 
 //get uri pieces
 $hennaArray = explode("/", $henna);
