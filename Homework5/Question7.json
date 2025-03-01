@@ -1,8 +1,35 @@
+
+{
+  "store_name": "Henna Shop",
+  "location": {
+    "street": "Tulane Ave W 456th St",
+    "city": "New York",
+    "state": "NY",
+    "zip": "100024"
+  },
 {
   "name": "Mariyam",
   "favorite_color": "pink",
   "location": {
     "city": "New York",
     "state": "Michigan"
-  }
+},
+ {
+  "name": "Zinab",
+  "favorite_color": "yellow",
+  "location": {
+    "city": "New York",
+    "state": "Jersey"
+  },
+  hennaHours": {
+    "monday": "12:00 -19:00",
+    "tuesday": "9:00-19:00",
+    "wednesday": "9:00-19:00",
+    "thursday": "9:00-17:00",
+    "friday": "12:00 -19:00",
+    "saturday": "12:00 -19:00",
+    "sunday": "12:00 -19:00"
+  },
+  "is_open": true,
+  "avaliblibe_slots": 32
 }
