@@ -21,7 +21,7 @@
     "city": "New York",
     "state": "Jersey"
   },
-  hennaHours": {
+  "hennaHours": {
     "monday": "12:00 -19:00",
     "tuesday": "9:00-19:00",
     "wednesday": "9:00-19:00",
