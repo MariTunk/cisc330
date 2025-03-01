@@ -1,35 +1,16 @@
-<?php
-//we need this to accept requests from any domain
-header("Access-Control-Allow-Origin: *");
+?php
+header('Content-Type: application/json');
 
-$uri = strtok($_SERVER["REQUEST_URI"], '?');
+// Get POST data
+$name = $_POST['email'] ?? '';
+$email = $_POST['password'] ?? '';
 
-//get uri pieces
-$uriArray = explode("/", $uri);
-//var_dump($uriArray);
-//0
-//1 forms
+// Create response
+$response = array(
+    'status' => 'success',
+    'message' => "Thank you,Your email:$email has been updated."
+);
 
-if ($uriArray[1] === 'cats' && $_SERVER['REQUEST_METHOD'] === 'GET') {
-    $cats = [
-        [
-            'name' => 'pinecone'
-        ],
-        [
-            'name' => 'Mr'
-        ]
-    ];
-
-    echo json_encode($cats);
-    exit();
-}
-
-if ($uriArray[1] === 'form' && $_SERVER['REQUEST_METHOD'] === 'POST') {
-    echo json_encode([
-        'message' => 'Success'
-    ]);
-    exit();
-}
-
-
+// Send JSON response
+echo json_encode($response);
 ?>
