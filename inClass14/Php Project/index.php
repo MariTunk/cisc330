@@ -6,7 +6,7 @@ require 'classes/Dog.php';
 //require 'inheritance/Mustang.php';
 
 //use chapterFour\classes\Cat;
-use phpProject\business;
+use Php_Project\business;
 //use chapterFour\inheritance\Mustang;
 
 
