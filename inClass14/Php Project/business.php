@@ -2,7 +2,7 @@
 
 namespace Php_Project\business;
 
-class Car {
+class henna {
 
     public function sale() {
         echo "item has been sold ";
