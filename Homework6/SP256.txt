@@ -1,0 +1,21 @@
+1. Define hoisting and closures in JS.
+2. What is PHP? What do server side languages do in web development?
+3. What are some examples of how the PHP and JavaScript programming languages are
+alike and how they differ?
+4. Why pick PHP over another server side scripting language like Python or Node?
+5. Compare and contrast echo and var_dump.
+
+  
+6. Create a new PHP project, in the index.php file create:
+a. An associative array with keys and values.
+b. Loop through the array and echo out a string that contains each key and value.
+7. Add to question 6:
+a. Create a function that has:
+i. a set return type
+ii. an optional parameter
+iii. a typed parameter
+iv. and call your function with values that have the correct data types
+8. Create another PHP project that includes a “resources” directory. In the resources
+directory create an HTML file that has elements to show an image, also place an image
+in the resources directory. When the domain is accessed in a browser(localhost), return
+the HTML page with the working image.
