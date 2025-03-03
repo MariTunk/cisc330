@@ -1,19 +1,14 @@
 <?php
 
-//require 'classes/Cat.php';
-require 'classes/Dog.php';
-//require 'inheritance/Car.php';
-//require 'inheritance/Mustang.php';
+require Php_Project/Business.php;
 
-//use chapterFour\classes\Cat;
-use Php_Project\business;
-//use chapterFour\inheritance\Mustang;
+use Php_Project\Business;
 
 
-$dog1 = new Dog('Daisy', 12);
-$dog2 = new Dog('Sophie', 5);
+$item1 = new Item('Jagua', 32);
+$item2 = new Item('Red', 10);
 
-echo $dog1->name;
-echo $dog2->name;
+echo $item1->name;
+echo $item2->name;
 
 >
