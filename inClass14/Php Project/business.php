@@ -2,10 +2,29 @@
 
 namespace Php_Project\business;
 
-class henna {
 
+//namespace Users\mariiii\homework6;
+
+class Item {
+    public $name;
+    public $price;
+
+    public function __construct($name, $price) {
+        $this->name = $name;
+        $this->price = $price;
+    }
+
+    public function toJson() {
+        return json_encode([
+            'name' => $this->name,
+            'price' => $this->price
+        ]);
+    }
+}
+
+ class Henna {
     public function sale() {
-        echo "item has been sold ";
+        echo "Item has been sold.";
     }
 }
 >
