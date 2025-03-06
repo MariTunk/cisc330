@@ -6,7 +6,7 @@ require "../phpProject/Models/Names.php";
 
 use phpProject\Models\user;
 
-class UserController
+class Control
 {
     public function getUsers() {
         $params = [
