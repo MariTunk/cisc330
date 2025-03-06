@@ -5,13 +5,13 @@ namespace phpProject\Models;
 class user {
     public function getAllUsersByName($params) {
            $associativeArray = [
-           'key1' => 'value1',
-           'key2' => 2,
+           'Guest' => '1',
+           'name' => 'Aminah',
           ],
           [
-                'id' => '2',
-                'name' => 'nathan'
-          ],
+            'Guest' => '2',
+            'name' => 'Nathan'
+          ];
   }
 
 return $allUsers;
