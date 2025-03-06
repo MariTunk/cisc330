@@ -2,14 +2,15 @@
 
 namespace phpProject\Controllers;
 
-require "../phpProject/Controllers/Names.php";
+require "../phpProject/Models/Names.php";
 
-use phpProject\Models\User;
+use phpProject\Models\user;
 
 class UserController
 {
     public function getUsers() {
         $params = [
+            'Guest' => $_GET[Guest],
             'name' => $_GET['name'] ?? null,
         ];
         $userModel = new User();
