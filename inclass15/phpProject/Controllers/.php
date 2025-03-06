@@ -2,7 +2,7 @@
 
 namespace phpProject\Controllers;
 
-require "../phpProject/Controllers/.php";
+require "../phpProject/Controllers/Names.php";
 
 use phpProject\Models\User;
 
