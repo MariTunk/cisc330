@@ -4,7 +4,7 @@
 namespace phpProject\Controllers;
 
 //require '../Users/Mariiii/inClass15/phpProject/Models/Names.php';
-equire '../phpProject/Models/Names.php';
+require '../phpProject/Models/Names.php';
 
 use phpProject\Models\user;
 
