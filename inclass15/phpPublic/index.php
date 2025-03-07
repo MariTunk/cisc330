@@ -1,9 +1,9 @@
 <?php
 
-require "../Models/router.php";
+require "../phpProject/router.php";
 
-use Models\router;
-
+use phpProject\Router;
 
 $router = new Router();
 $router->handleRoutes();
+?>
