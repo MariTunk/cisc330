@@ -1,12 +1,12 @@
 <?php
 
-namespace phpProject;
+namespace app;
 
-require "../phpProject/Controllers/Control.php";
+require "../phpProject/Controllers/UserController.php";
 
-use phpProject\controllers\Control;
+use phpProject\controllers\UserController;
 
-class router {
+class Router {
 
     public function handleRoutes() {
 
@@ -21,23 +21,24 @@ class router {
 
     protected function userRoutes($uriArray) {
         if ($uriArray[1] === 'api' && $uriArray[2] === 'users' && $_SERVER['REQUEST_METHOD'] === 'GET') {
-            $Control = new Control();
-            $Control->getUsers();
+            $userController = new UserController();
+            $userController->getUsers();
         }
 
         if ($uriArray[1] === 'api' && $uriArray[2] === 'users' && $_SERVER['REQUEST_METHOD'] === 'POST') {
-            $Control = new Control();
-            $Control->saveUser();
+            $userController = new UserController();
+            $userController->saveUser();
         }
 
         if ($uriArray[1] === 'users-add' && $_SERVER['REQUEST_METHOD'] === 'GET') {
-            $Control = new Control();
-            $Control->viewAddUsers();
+            $userController = new UserController();
+            $userController->viewAddUsers();
         }
 
-        //if ($_SERVER['REQUEST_METHOD'] === 'GET') {
-          //  require './views/users.html';
+        if ($_SERVER['REQUEST_METHOD'] === 'GET') {
+            require './views/users.html';
             exit();
         }
 
     }
+}   
