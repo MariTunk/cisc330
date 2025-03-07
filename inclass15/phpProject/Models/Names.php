@@ -2,21 +2,25 @@
 
 namespace phpProject\Models;
 
-class user {
+
+class User {
     public function getAllUsersByName($params) {
-           $associativeArray = [
-           'Guest' => '1',
-           'name' => 'Aminah',
-          ],
-          [
-            'Guest' => '2',
-            'name' => 'Nathan'
-          ],
-           [
-            'Guest' => '3',
-            'name' => 'Mariyam'
-          ];    
-        
+
+        $allUsers = 
+        [
+              [
+                'Guest' => '1',
+                'name' => 'Aminah',
+               ],
+               [
+                 'Guest' => '2',
+                 'name' => 'Nathan'
+               ],
+               [
+                 'Guest' => '3',
+                 'name' => 'Mariyam'
+               ],  
+        ];
 
         if (!empty($params['name'])) {
             return array_filter($allUsers, function ($user) use ($params) {
@@ -26,7 +30,7 @@ class user {
                 return null;
             });
         }
-  }
 
-return $allUsers;
+        return $allUsers;
+    }
 }
