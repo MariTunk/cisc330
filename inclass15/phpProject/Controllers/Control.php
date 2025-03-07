@@ -10,7 +10,7 @@ class Control
 {
     public function getUsers() {
         $params = [
-            'Guest' => $_GET[Guest],
+            'Guest' => $_GET['Guest'],
             'name' => $_GET['name'] ?? null,
         ];
         $userModel = new User();
