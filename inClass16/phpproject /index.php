@@ -1,6 +1,6 @@
 <?php
 
-namespace inClass16;
+namespace inClass16/phpproject;
 
 use Exception;
 
