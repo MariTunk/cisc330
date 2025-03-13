@@ -2,90 +2,42 @@
 
 namespace app\controllers;
 
-require "../app/models/User.php";
+use Exception;
+use Error;
 
-use app\models\User;
+function myErrorHandler($errno, $errstr, $errfile, $errline) {
+//    echo "<b>Custom error:</b> [$errno] $errstr<br>";
+//    echo " Error on line $errline in $errfile<br>";
+    echo 'my error handler called';
+    exit();
+}
+class ErrorController {
 
-class UserController
-{
-    public function getUsers() {
-        $params = [
-            //pincone
-            'name' => $_GET['name'] ?? null,
-        ];
-        $userModel = new User();
-        $users = $userModel->getAllUsersByName($params);
-        echo json_encode($users);
-        exit();
+    public function warningFunction() {
+        preg_match('There will be a warning about missing delimiter here!', 'test');
     }
 
-    public function saveUser() {
-        //get post data from our form post
-        //{name: 'pinecone', age: '14'}
-        $name = $_POST['name'] ?? null;
-        $age = $_POST['age'] ?? null;
-        $email = $_POST['email'] ?? null;
-        $errors = [];
-
-        //validate and sanitize name
-        if ($name) {
-            //sanitize, htmlspecialchars replaces html reserved characters with their entity numbers
-            //meaning they can't be run as code, this will stop an xxs attack
-            $name = htmlspecialchars($name);
-
-            echo ($name);
-            echo '<br>';
-            echo htmlspecialchars(htmlspecialchars($name));
-
-            //validate text length
-            if (strlen($name) < 2) {
-                $errors['name'] = 'name is too short';
-            }
-        } else {
-            $errors['name'] = 'name is required';
-        }
-
-        //numbers
-        if ($age) {
-            if ($age <= 0 || $age > 120 || !intval($age)) {
-                $errors['age'] = 'age is invalid';
-            }
-        } else {
-            $errors['age'] = 'age is required';
-        }
-
-        //email via regular expressions
-        if ($email) {
-            //regex for valid email
-            $regex = '/^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,3})$/';
-            if (!preg_match($regex, $email)) {
-                $errors['email'] = 'email is invalid';
-            }
-        } else {
-            $errors['email'] = 'email is required';
-        }
-
-        //if we have errors
-        if (count($errors)) {
-            http_response_code(400);
-            echo json_encode($errors);
-            exit();
-        }
-
-        //we could save the data off to be saved here
-
-        $returnData = [
-            'name' => $name,
-            'age' => $age,
-            'email' => $email,
-        ];
-        echo json_encode($returnData);
-        exit();
+    public function errorFunction() {
+        $price = 7;
+        $quantity = 'five';
+        $price * $quantity;
     }
+    public function viewErrors() {
+//        $this->badFunction();
+//        $this->warningFunction();
+        try {
+//        echo 'Find an error";
+//            $this->badFunction();
+//            if (true) {
+//                throw new Exception('Custom error message!');
+//            }
+        } catch (Error $error) {
+            echo $error;
+        }
 
-    public function viewAddUsers() {
-        require './views/add-users.html';
-        exit();
+        //set a custom function for errors
+        set_error_handler("app\controllers\myErrorHandler");
+        trigger_error('');
+
     }
-
 }
