@@ -1,0 +1,44 @@
+CISC 3300 S25
+Homework 7
+
+1. What is a class? What is an object? What is OOP?
+A class is a blueprint or template for creating objects. It defines variables and functions that objects created from the class will have. 
+An object is an instance of a class that represents a real-world entity, it has its own unique values for the properties defined in the class. 
+OOP is a programming uses classes and objects to structure code. It helps organize code for better reusability, scalability, and maintainability
+
+2. Why use an abstract class in OOP?
+An abstract class can be used when defining a base class that cannot be instantiated on its own but provides a common structure for derived classes.
+it provides shared functionality to multiple related classes and enforces  a contract for subclasses
+
+3. What are superglobals in PHP, what are some examples of data they provide?
+Superglobals are built-in PHP arrays that provide access to global data from different. They are accessible from anywhere in the script.
+$_GET – Retrieves data sent via URL query parameters.
+$_POST – Retrieves data submitted through a form using the POST method.
+$_FILES – Handles file uploads.
+
+4. What are the two steps to setting up and using a class via namespaces?
+- Define the namespace in the class file
+- Use the namespace when calling the class
+
+5. What is MVC? Detail the different parts.
+Model View Controller seperates the diffent parts of the code 
+Model - handles the application's data interactions. It represents the core func
+View- Represents the user interface and displays data received from the model
+Code -It processes user inputs, interacts with the Model, and updates the View 
+
+6. If I had a resource called users in my application that was designed with RESTFUL URI
+design, what would the URI and HTTP verbs be for:
+  a. getting all users GET /users 
+  b. getting one users GET /users/{id} 
+  c. saving a user  POST /users 
+  d. editing a user PUT /users/{id}
+  e. deleting a user PATCH /users/{id}
+
+
+7. Create a PHP project in an MVC style. It should have the ability to submit a new note
+resource, a note should have a title and a description. The title of the note should be
+more than 3 characters long and the description should be more than 10 characters
+long. Any special characters should be converted to HTML entities. On the frontend
+show a success message if the request is successful and an error message if anything is
+wrong. Add some basic styling.
+a. no need for a model class, the validation can happen in a controller method.
