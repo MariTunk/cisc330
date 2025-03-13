@@ -1,1 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Form submission</title>
+        <style>
+            * {
+                font-family: Arial, Verdana, sans-serif;
+                color: #665544;
+            }
 
+            input {
+                border-bottom: 1px dotted #dcdcdc;
+                border-top: none;
+                border-right: none;
+                border-left: none;
+                padding: 5px;
+                width: 280px;
+                margin-bottom: 20px;
+            }
+
+            input:focus {
+                border: 1px dotted #dcdcdc;
+                outline: none;
+            }
+
+            input[type=submit] {
+            /*input#submit {*/
+                color: #ffffff;
+                background-color: #665544;
+                border: none;
+                border-radius: 5px;
+                width: 80px;
+            }
+
+            input#submit:hover {
+                color: #665544;
+                background-color: #efefef;
+            }
+
+            fieldset {
+                width: 350px;
+                border: 1px solid #dcdcdc;
+                border-radius: 10px;
+                padding: 20px;
+                text-align: right;
+            }
+
+            legend {
+                background-color: #efefef;
+                border: 1px solid #dcdcdc;
+                border-radius: 10px;
+                padding: 10px 20px;
+                text-align: left;
+                text-transform: uppercase;
+            }
+        </style>
+    </head>
+    <body>
+        <form>
+            <fieldset>
+                <legend>Submit a Note</legend>
+                <label for="name">Title: </label><input type="text" id="name" minlength="3"/>
+                <label for="email">Description : </label><input type="text" id="email" minlength="10"/>
+                <input type="submit" value="Subscribe" id="submit"/>
+            </fieldset>
+        </form>
+    </body>
+</html>
