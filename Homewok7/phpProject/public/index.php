@@ -1,8 +1,13 @@
 <?php
+require "./controllers/controllers.php";
 
-require "../app/Router.php";
+use controllers\Note;
 
-use app\Router;
+$controllers = new Note();
 
-$router = new Router();
-$router->handleRoutes();
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $controllers->saveUser();
+} else {
+    require './view/form.html';
+}
+?>
