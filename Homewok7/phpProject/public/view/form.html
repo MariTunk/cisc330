@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title> Form submission</title>
+        <title>Form Submission</title>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> <!-- Added jQuery -->
         <style>
             * {
                 font-family: Arial, Verdana, sans-serif;
@@ -24,7 +25,6 @@
             }
 
             input[type=submit] {
-            /*input#submit {*/
                 color: #ffffff;
                 background-color: #665544;
                 border: none;
@@ -53,59 +53,78 @@
                 text-align: right;
                 text-transform: uppercase;
             }
+
+            .success-text {
+                color: green;
+                margin-top: 10px;
+            }
+
+            .error-text {
+                color: red;
+                margin-top: 10px;
+            }
         </style>
     </head>
     <body>
-        <form>
+        <form id="note-form"> 
             <fieldset>
                 <legend>Submit a Note</legend>
-                <label for="name">Title: </label><input type="text" id="name" minlength="3"/>
-                <label for="email">Description : </label><input type="text" id="email" minlength="10"/>
-                <input type="submit" value="Subscribe" id="submit"/>
+                <label for="title">Title: </label><input type="text" id="title-input" minlength="3"/> 
+                <span id="title-error" class="error-text"></span><br> 
+                <label for="description">Description : </label><input type="text" id="description-input" minlength="10"/> 
+                <span id="description-error" class="error-text"></span><br>
+                <input type="submit" value="Submit" id="submit"/>
             </fieldset>
         </form>
+        <div id="data-container"></div> 
         <script>
-        $(document).ready(function () {
-            $('#note-form').on('submit', function (e) {
-                e.preventDefault();
+            $(document).ready(function () {
+                $('#note-form').on('submit', function (e) {
+                    e.preventDefault();
 
-                const data = {
-                    title: $('#title-input').val(),
-                    description: $('#description-input').val(),
-                };
+                    const data = {
+                        title: $('#title-input').val(),
+                        description: $('#description-input').val(),
+                    };
 
-                $('#title-error').html('');
-                $('#description-error').html('');
-                $('#data-container').html('');
+                    
+                    $('#title-error').html('');
+                    $('#description-error').html('');
+                    $('#data-container').html('');
 
-                $.ajax({
-                    url: 'http://localhost',
-                    type: "POST",
-                    data: data,
-                    dataType: "json",
-                    success: function (response) {
-                        $('#data-container').html(
-                            `<div class='success-text'>
-                                ${response.message}
-                            </div>`
-                        );
-                        $('#title-input').val('');
-                        $('#description-input').val('');
-                    },
-                    error: function (error) {
-                        $.each(error.responseJSON, function (key, value) {
-                            if (key === 'title') {
-                                $('#title-error').html(`<span class='error-text'>${value}</span>`);
+                    $.ajax({
+                        url: 'http://localhost/homemork8/public/api/notes', 
+                        type: "POST",
+                        data: data,
+                        dataType: "json",
+                        success: function (response) {
+                            // Display success message
+                            $('#data-container').html(
+                                `<div class='success-text'>
+                                    ${response.message}
+                                </div>`
+                            );
+                            
+                            $('#title-input').val('');
+                            $('#description-input').val('');
+                        },
+                        error: function (error) {
+                            
+                            if (error.responseJSON) {
+                                $.each(error.responseJSON, function (key, value) {
+                                    if (key === 'title') {
+                                        $('#title-error').html(`<span class='error-text'>${value}</span>`);
+                                    }
+                                    if (key === 'description') {
+                                        $('#description-error').html(`<span class='error-text'>${value}</span>`);
+                                    }
+                                });
                             }
-                            if (key === 'description') {
-                                $('#description-error').html(`<span class='error-text'>${value}</span>`);
-                            }
-                        });
-                    }
+                        }
+                    });
                 });
             });
-        });
-    </script>
-        
+        </script>
     </body>
 </html>
+  
