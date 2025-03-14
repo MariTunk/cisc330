@@ -64,5 +64,48 @@
                 <input type="submit" value="Subscribe" id="submit"/>
             </fieldset>
         </form>
+        <script>
+        $(document).ready(function () {
+            $('#note-form').on('submit', function (e) {
+                e.preventDefault();
+
+                const data = {
+                    title: $('#title-input').val(),
+                    description: $('#description-input').val(),
+                };
+
+                $('#title-error').html('');
+                $('#description-error').html('');
+                $('#data-container').html('');
+
+                $.ajax({
+                    url: 'http://localhost',
+                    type: "POST",
+                    data: data,
+                    dataType: "json",
+                    success: function (response) {
+                        $('#data-container').html(
+                            `<div class='success-text'>
+                                ${response.message}
+                            </div>`
+                        );
+                        $('#title-input').val('');
+                        $('#description-input').val('');
+                    },
+                    error: function (error) {
+                        $.each(error.responseJSON, function (key, value) {
+                            if (key === 'title') {
+                                $('#title-error').html(`<span class='error-text'>${value}</span>`);
+                            }
+                            if (key === 'description') {
+                                $('#description-error').html(`<span class='error-text'>${value}</span>`);
+                            }
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+        
     </body>
 </html>
