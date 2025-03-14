@@ -1,5 +1,5 @@
 <?php
-require "../controller/controllers.php";
+require "../controllers/controllers.php";
 use controller\Note;
 
 $controller = new Note();
@@ -7,5 +7,5 @@ $controller = new Note();
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $controller->saveUser();
 } else {
-    require '../view/form.html';
+    require './public/view/form.html';
 }
