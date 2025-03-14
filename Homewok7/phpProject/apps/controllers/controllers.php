@@ -3,7 +3,7 @@
 
 namespace controller;
 
-use Controllers\controllers;
+use controllers\controllers;
 
 class Note
 {
