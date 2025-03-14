@@ -1,10 +1,9 @@
+
 <?php
 
 namespace controller;
 
-//require "../controller/noteController.php";
-
-use controllers\controller;
+use Controllers\controllers;
 
 class Note
 {
@@ -38,7 +37,7 @@ class Note
 
             //validate text length
             if (strlen($title) < 4) {
-                $errors['title'] = 'Title must be at least 4 characters long';
+                $errors['title'] = 'Title must be more than 3 charachters long';
             }
         } else {
             $errors['title'] = 'Title is required';
@@ -53,7 +52,7 @@ class Note
 
             //validate text length
             if (strlen($description) < 11) {
-                $errors['description'] = 'Description must be at least 11 characters long';
+                $errors['description'] = 'Description must be more than 10 characters long';
             }
         } else {
             $errors['description'] = 'Description is required';
@@ -77,8 +76,7 @@ class Note
     }
 
     public function viewAddUsers() {
-        require './view/messageVal.html';
+        require './view/form.html';
         exit();
     }
-
 }
