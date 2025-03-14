@@ -1,13 +1,11 @@
 <?php
-require "./controllers/controllers.php";
+require "../controller/controllers.php";
+use controller\Note;
 
-use controllers\Note;
-
-$controllers = new Note();
+$controller = new Note();
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $controllers->saveUser();
+    $controller->saveUser();
 } else {
-    require './view/form.html';
+    require '../view/form.html';
 }
-?>
