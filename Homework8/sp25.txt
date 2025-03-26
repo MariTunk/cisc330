@@ -1,0 +1,22 @@
+CISC 3300 S25
+Homework 8
+
+1. What are sessions and cookies? What do they do?
+Cookies are small text files stored on the browser by the server.They are used to save information about 
+the user and continue it across multiple requests. Sessions are server-side storage mechanisms that store temporary user information.
+When a session is created, the server assigns a unique session ID, which is sent to the client Cookies are on the client side;
+Sessions are on the server side.
+    
+2. What is SQL? MySQL? What are relational databases?
+SQL (Structured Query Language) is a programming language used to manage and manipulate relational databases. It allows operations like
+querying, updating, inserting, and deleting data. A Relational database is a way of structuring information in tables, rows, and column
+
+3. What is normalization in SQL?
+Normalization is organizing data in a database to reduce redundancy and improve data integrity.
+It divides large tables into smaller, related tables and defines their relationships
+
+4. What are primary and foreign keys?
+A primary key is a unique identifier for each record in a table; it must contain unique values and cannot contain NULL values. 
+Each table can have only one primary key. 
+A foreign key is a column or group of columns in a table that establishes a link between the data in two tables. It references the primary key in another table.
+
