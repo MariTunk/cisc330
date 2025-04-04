@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add New Product</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Add New Henna Product</h1>
+        <a href="page.html" class="btn">Home</a>
+    </header>
+
+    <main>
+        <section>
+            <h2>Enter Product Details</h2>
+            <form id="add-product-form">
+                <label for="product_name">Product Name</label>
+                <input type="text" id="product_name" name="product_name" required>
+
+                <label for="product_description">Description</label>
+                <textarea id="product_description" name="product_description" required></textarea>
+
+                <button type="submit" class="btn">Add Product</button>
+            </form>
+        </section>
+    </main>
+
+
+
+    <script>
+        document.getElementById('add-product-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            const formData = new FormData(this);
+            const productData = {
+                product_name: formData.get('product_name'),
+                product_description: formData.get('product_description')
+            };
+
+            // Send a POST request to add the product
+            fetch('/api/mariyam', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(productData)
+            })
+            .then(response => response.json())
+            .then(data => {
+                alert('Product added successfully!');
+                window.location.href = 'products.html'; // Redirect to the products list
+            })
+            .catch(error => console.error('Error adding product:', error));
+        });
+    </script>
+</body>
+</html>
