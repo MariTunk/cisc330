@@ -12,7 +12,7 @@
     <body>
 
         <div class="container users-form margin-thirty">
-            <a href="http://localhost/" class="link">Home</a>
+            <a href="http://localhost:8888/api/henna" class="link">Home</a>
             <h2 class="margin-thirty">Add Item</h2>
             <form id="form-id">
                 <div class="form-group margin-twenty">
@@ -48,7 +48,7 @@
                         price,
                     }
                     $.ajax({
-                        url: `http://localhost/api/henna`,
+                        url: `http://localhost:8888/new-item`,
                         type: "POST",
                         data: data,
                         dataType: "json",
