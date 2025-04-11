@@ -8,7 +8,7 @@ abstract class Model {
 
     private function connect() {
         $string = "mysql:hostname=" . DBHOST . ";dbname=" . DBNAME;
-        $con = new PDO($string, DBUSER);
+        $con = new PDO($string, DBUSER,DBPASS);
         return $con;
     }
 
