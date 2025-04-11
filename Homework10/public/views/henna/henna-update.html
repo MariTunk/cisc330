@@ -39,7 +39,7 @@
                 const urlArry = window.location.pathname.split("/")
                 const id = urlArry[2]
                 $.ajax({
-                    url: `http://localhost/api/henna/${id}`,
+                    url: `http://localhost:8888/api/henna/${id}`,
                     type: "GET",
                     dataType: "json",
                     success: function (data) {
@@ -65,13 +65,13 @@
                         
                     }
                     $.ajax({
-                        url: `http://localhost/api/henna/${id}`,
+                        url: `http://localhost:8888/api/henna/${id}`,
                         type: "PUT",
                         data: data,
                         dataType: "json",
                         success: function (data) {
                             console.log("here");
-                            window.location.replace("http://localhost/");
+                            window.location.replace("http://localhost:8888/new-item");
                         },
                         error: function (data){
                             $('#error-container').html('')
