@@ -133,22 +133,22 @@ class HennaController
     }
 
     public function hennaView() {
-        include './public/views/henna-view.html';
+        include './public/views/henna/henna-view.html';
         exit();
     }
 
     public function hennaAddView() {
-        include './public/views/henna-add.html';
+        include './public/views/henna/henna-add.html';
         exit();
     }
 
     public function hennaDeleteView() {
-        include './public/views/henna-delete.html';
+        include './public/views/henna/henna-delete.html';
         exit();
     }
 
     public function bakeryUpdateView() {
-        include './public/views/henna-update.html';
+        include './public/views/henna/henna-update.html';
         exit();
     }
     
