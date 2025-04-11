@@ -64,7 +64,7 @@ if ($uri === '/new-item' && $_SERVER['REQUEST_METHOD'] === 'GET') {
     $hennaController->hennaAddView();
 }
 
-if ($uriArray[1] === 'bakery' && $_SERVER['REQUEST_METHOD'] === 'GET') {
+if ($uriArray[1] === '/new-item' && $_SERVER['REQUEST_METHOD'] === 'GET') {
     $hennaController = new HennaController();
     $hennaController->hennaUpdateView();
 }
