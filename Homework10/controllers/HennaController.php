@@ -41,7 +41,7 @@ class HennaController
     }
 
     public function getAllHenna() {
-        $bakeryModel = new Henna();
+        $hennaModel = new Henna();
         header("Content-Type: application/json");
         $henna = $hennaModel->getAllHenna();
 
@@ -59,8 +59,8 @@ class HennaController
 
     public function saveHenna() {
         $inputData = [
-            'item' => $_POST['item'] ?: null,
-            'price' => $_POST['price'] ?: null,
+            'item' => $_POST['item'] ? $_POST['item']: false,
+            'price' => $_POST['price'] ? $_POST['price']: false,
         ];
         $hennaData = $this->validateHenna($inputData);
 
@@ -73,9 +73,10 @@ class HennaController
         );
 
         http_response_code(200);
-        echo json_encode([
-            'success' => true
+        $this->returnJSON([
+            'route' => '/api/henna'
         ]);
+        
         exit();
     }
 
@@ -132,24 +133,22 @@ class HennaController
     }
 
     public function hennaView() {
-        include './public/views/henna/henna-view.html';
+        include './public/views/henna-view.html';
         exit();
     }
 
     public function hennaAddView() {
-        include './public/views/henna/henna-add.html';
+        include './public/views/henna-add.html';
         exit();
     }
 
     public function hennaDeleteView() {
-        include './public/views/henna/henna-delete.html';
+        include './public/views/henna-delete.html';
         exit();
     }
 
     public function bakeryUpdateView() {
-        include './public/views/henna/henna-update.html';
+        include './public/views/henna-update.html';
         exit();
     }
     
-
-}
